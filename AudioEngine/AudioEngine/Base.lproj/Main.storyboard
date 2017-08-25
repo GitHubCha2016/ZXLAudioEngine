@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIy-nA-ifY">
+                                <rect key="frame" x="26" y="220" width="323" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WWG-Ok-IJB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="边录边播">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAndRecorder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5z2-Oz-DQi"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DIT-pG-1Qu">
+                                <rect key="frame" x="26" y="308" width="323" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="8k1-g8-TXk"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n72-TQ-F8y">
+                                <rect key="frame" x="26" y="362" width="323" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JyC-xJ-AHc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="停止">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwy-3w-cfb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrz-9N-xhG">
+                                <rect key="frame" x="26" y="432" width="323" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rxu-zK-cSE"/>
+                                </constraints>
+                                <state key="normal" title="添加高通音效">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addHightPassFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tSn-MB-dJG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bc-31-QcK">
+                                <rect key="frame" x="26" y="480" width="323" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LnH-vB-axC"/>
+                                </constraints>
+                                <state key="normal" title="移除高通音效">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mcv-OK-TxS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qrz-9N-xhG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="13H-uj-Tn8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n72-TQ-F8y" secondAttribute="trailing" constant="10" id="361-NT-0uQ"/>
+                            <constraint firstItem="qrz-9N-xhG" firstAttribute="top" secondItem="n72-TQ-F8y" secondAttribute="bottom" constant="40" id="7lp-Hw-ift"/>
+                            <constraint firstItem="8Bc-31-QcK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="DdQ-9L-iIa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Bc-31-QcK" secondAttribute="trailing" constant="10" id="HqQ-pQ-PMv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qrz-9N-xhG" secondAttribute="trailing" constant="10" id="O6l-0r-Nfp"/>
+                            <constraint firstItem="UIy-nA-ifY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="OI7-pC-K5V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UIy-nA-ifY" secondAttribute="trailing" constant="10" id="OtS-Ac-wYr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DIT-pG-1Qu" secondAttribute="trailing" constant="10" id="QFF-O2-nG9"/>
+                            <constraint firstItem="UIy-nA-ifY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="a0u-vs-jsa"/>
+                            <constraint firstItem="8Bc-31-QcK" firstAttribute="top" secondItem="qrz-9N-xhG" secondAttribute="bottom" constant="18" id="eBP-PD-Jqm"/>
+                            <constraint firstItem="n72-TQ-F8y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="jri-wv-Ql7"/>
+                            <constraint firstItem="DIT-pG-1Qu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="mUd-cF-6x4"/>
+                            <constraint firstItem="DIT-pG-1Qu" firstAttribute="top" secondItem="UIy-nA-ifY" secondAttribute="bottom" constant="58" id="oWk-Qd-FA9"/>
+                            <constraint firstItem="n72-TQ-F8y" firstAttribute="top" secondItem="DIT-pG-1Qu" secondAttribute="bottom" constant="52" id="zV5-vS-Lwi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progress" destination="DIT-pG-1Qu" id="8CG-Le-8P0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
