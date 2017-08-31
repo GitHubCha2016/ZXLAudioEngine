@@ -1,0 +1,20 @@
+//
+//  Prefix.pch
+//  AudioEngine
+//
+//  Created by Apple on 2017/8/31.
+//  Copyright © 2017年 dandan. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Macro.h"
+#import <TheAmazingAudioEngine.h>
+#import <AERecorder.h>
+
+
+#endif /* Prefix_pch */

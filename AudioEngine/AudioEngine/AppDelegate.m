@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "RecorderViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,7 @@
     // 创建根控制器
     self.window = [[UIWindow alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     self.window.backgroundColor = [UIColor whiteColor];
-    RootViewController * rootVC = [[RootViewController alloc]init];
+    RecorderViewController * rootVC = [[RecorderViewController alloc]init];
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     

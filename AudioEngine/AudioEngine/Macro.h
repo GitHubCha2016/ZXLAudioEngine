@@ -11,3 +11,9 @@
 
 
 #endif /* Macro_h */
+
+#if DEBUG
+#define customLog(format, ...) NSLog(format, ## __VA_ARGS__)
+#else
+#define customLog(format, ...)
+#endif

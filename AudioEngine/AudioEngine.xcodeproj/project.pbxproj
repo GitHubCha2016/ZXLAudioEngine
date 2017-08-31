@@ -16,9 +16,11 @@
 		1818753C1F4EDCAE0098E9F0 /* AudioEngineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818753B1F4EDCAE0098E9F0 /* AudioEngineManager.m */; };
 		1865FBCC1F50149B00F0BF25 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865FBCA1F50149B00F0BF25 /* RootViewController.m */; };
 		1865FBCD1F50149B00F0BF25 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1865FBCB1F50149B00F0BF25 /* RootViewController.xib */; };
-		1865FBCF1F501B7700F0BF25 /* frozen.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1865FBCE1F501B7700F0BF25 /* frozen.m4a */; };
-		1865FBD11F501C2500F0BF25 /* fun.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1865FBD01F501C2500F0BF25 /* fun.m4a */; };
-		1865FBD31F501DAB00F0BF25 /* story.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1865FBD21F501DAB00F0BF25 /* story.m4a */; };
+		1878D67A1F57DD98000201C4 /* RecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1878D6781F57DD98000201C4 /* RecorderViewController.m */; };
+		1878D67B1F57DD98000201C4 /* RecorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1878D6791F57DD98000201C4 /* RecorderViewController.xib */; };
+		1878D6801F57DFF4000201C4 /* frozen.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1878D67D1F57DFF4000201C4 /* frozen.m4a */; };
+		1878D6811F57DFF4000201C4 /* fun.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1878D67E1F57DFF4000201C4 /* fun.m4a */; };
+		1878D6821F57DFF4000201C4 /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1878D67F1F57DFF4000201C4 /* video.mov */; };
 		8FE7612C31DA2C7CA2C3C5E8 /* libPods-AudioEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD50B3321D537B447E822941 /* libPods-AudioEngine.a */; };
 /* End PBXBuildFile section */
 
@@ -41,9 +43,13 @@
 		1865FBC91F50149B00F0BF25 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		1865FBCA1F50149B00F0BF25 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		1865FBCB1F50149B00F0BF25 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
-		1865FBCE1F501B7700F0BF25 /* frozen.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = frozen.m4a; sourceTree = "<group>"; };
-		1865FBD01F501C2500F0BF25 /* fun.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fun.m4a; sourceTree = "<group>"; };
-		1865FBD21F501DAB00F0BF25 /* story.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = story.m4a; sourceTree = "<group>"; };
+		1878D6771F57DD98000201C4 /* RecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderViewController.h; sourceTree = "<group>"; };
+		1878D6781F57DD98000201C4 /* RecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderViewController.m; sourceTree = "<group>"; };
+		1878D6791F57DD98000201C4 /* RecorderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecorderViewController.xib; sourceTree = "<group>"; };
+		1878D67D1F57DFF4000201C4 /* frozen.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = frozen.m4a; sourceTree = "<group>"; };
+		1878D67E1F57DFF4000201C4 /* fun.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fun.m4a; sourceTree = "<group>"; };
+		1878D67F1F57DFF4000201C4 /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
+		1878D6831F57E083000201C4 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		689ABE6B53CE2CFB019AC8FE /* Pods-AudioEngine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioEngine.release.xcconfig"; path = "Pods/Target Support Files/Pods-AudioEngine/Pods-AudioEngine.release.xcconfig"; sourceTree = "<group>"; };
 		AD50B3321D537B447E822941 /* libPods-AudioEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AudioEngine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91E7E14AB13D0D81D614E33 /* Pods-AudioEngine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioEngine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AudioEngine/Pods-AudioEngine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,17 +88,16 @@
 		181873A51F4EBC3F0098E9F0 /* AudioEngine */ = {
 			isa = PBXGroup;
 			children = (
-				1865FBD21F501DAB00F0BF25 /* story.m4a */,
-				1865FBD01F501C2500F0BF25 /* fun.m4a */,
-				1865FBCE1F501B7700F0BF25 /* frozen.m4a */,
-				1865FBC81F50148700F0BF25 /* Class */,
 				181873A91F4EBC3F0098E9F0 /* AppDelegate.h */,
 				181873AA1F4EBC3F0098E9F0 /* AppDelegate.m */,
 				181873B71F4EBC3F0098E9F0 /* Info.plist */,
+				1878D67C1F57DFF4000201C4 /* Source */,
+				1865FBC81F50148700F0BF25 /* Class */,
 				181873A61F4EBC3F0098E9F0 /* Supporting Files */,
 				1818753A1F4EDCAE0098E9F0 /* AudioEngineManager.h */,
 				1818753B1F4EDCAE0098E9F0 /* AudioEngineManager.m */,
 				1865FBC71F5013FE00F0BF25 /* Macro.h */,
+				1878D6831F57E083000201C4 /* Prefix.pch */,
 			);
 			path = AudioEngine;
 			sourceTree = "<group>";
@@ -126,8 +131,21 @@
 				1865FBC91F50149B00F0BF25 /* RootViewController.h */,
 				1865FBCA1F50149B00F0BF25 /* RootViewController.m */,
 				1865FBCB1F50149B00F0BF25 /* RootViewController.xib */,
+				1878D6771F57DD98000201C4 /* RecorderViewController.h */,
+				1878D6781F57DD98000201C4 /* RecorderViewController.m */,
+				1878D6791F57DD98000201C4 /* RecorderViewController.xib */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		1878D67C1F57DFF4000201C4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1878D67D1F57DFF4000201C4 /* frozen.m4a */,
+				1878D67E1F57DFF4000201C4 /* fun.m4a */,
+				1878D67F1F57DFF4000201C4 /* video.mov */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		60517EE262B4D722B1EF8A76 /* Pods */ = {
@@ -175,6 +193,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = N4VVDZV92X;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -201,12 +224,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1865FBD11F501C2500F0BF25 /* fun.m4a in Resources */,
-				1865FBCF1F501B7700F0BF25 /* frozen.m4a in Resources */,
+				1878D67B1F57DD98000201C4 /* RecorderViewController.xib in Resources */,
+				1878D6821F57DFF4000201C4 /* video.mov in Resources */,
+				1878D6801F57DFF4000201C4 /* frozen.m4a in Resources */,
 				181873B61F4EBC3F0098E9F0 /* LaunchScreen.storyboard in Resources */,
 				1865FBCD1F50149B00F0BF25 /* RootViewController.xib in Resources */,
 				181873B31F4EBC3F0098E9F0 /* Assets.xcassets in Resources */,
-				1865FBD31F501DAB00F0BF25 /* story.m4a in Resources */,
+				1878D6811F57DFF4000201C4 /* fun.m4a in Resources */,
 				181873B11F4EBC3F0098E9F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1878D67A1F57DD98000201C4 /* RecorderViewController.m in Sources */,
 				181873AE1F4EBC3F0098E9F0 /* ViewController.m in Sources */,
 				181873AB1F4EBC3F0098E9F0 /* AppDelegate.m in Sources */,
 				1818753C1F4EDCAE0098E9F0 /* AudioEngineManager.m in Sources */,
@@ -395,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N4VVDZV92X;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AudioEngine/Prefix.pch";
 				INFOPLIST_FILE = AudioEngine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EDG.AudioEngine;
@@ -408,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N4VVDZV92X;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AudioEngine/Prefix.pch";
 				INFOPLIST_FILE = AudioEngine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EDG.AudioEngine;

@@ -3,6 +3,7 @@ target 'AudioEngine'  do
 platform :ios, "8.0"
 
 pod 'TheAmazingAudioEngine'
+pod 'MBProgressHUD', '~> 1.0.0'
 
 end
 
