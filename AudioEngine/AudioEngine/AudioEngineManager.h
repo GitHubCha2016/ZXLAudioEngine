@@ -9,7 +9,18 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
+// http://www.cnblogs.com/kenshincui/p/4186022.html
+// http://www.cnblogs.com/goodboy-heyang/p/5374322.html
+// 音频编码 https://baike.baidu.com/item/%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81?fr=aladdin
+// 码农人生 http://msching.github.io/blog/2014/07/07/audio-in-ios/
+
 @interface AudioEngineManager : NSObject
+
+/** AERecorder */
+@property (nonatomic, strong) AERecorder * recorder;
+
+/** player */
+@property (nonatomic, strong) AEAudioFilePlayer * player;
 
 + (instancetype)share;
 
@@ -25,5 +36,8 @@
 - (void)finishRecorder;
 @property (nonatomic, assign) BOOL recording;
 
+
+/** 检测音频变化 */
+@property (nonatomic, copy) void(^AudioPowerChangeBlock)(CGFloat inputAvg,CGFloat inputPeak);
 
 @end

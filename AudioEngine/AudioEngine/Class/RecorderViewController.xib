@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecorderViewController">
             <connections>
+                <outlet property="audioPowerProgress" destination="PCp-P9-48W" id="nMI-U7-aIe"/>
                 <outlet property="recorderButton" destination="Hvr-jb-nPL" id="rlt-ub-jCw"/>
+                <outlet property="recorderTime" destination="6HV-vF-mZE" id="BcK-vs-y1r"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,29 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wvm-29-9Dh">
-                    <rect key="frame" x="163" y="523" width="48" height="48"/>
-                    <color key="backgroundColor" red="0.76078431369999999" green="0.67843137249999996" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="6I2-7V-iWC"/>
-                        <constraint firstAttribute="width" constant="48" id="LpW-2X-xPj"/>
-                        <constraint firstAttribute="height" constant="48" id="hCv-wH-85M"/>
-                    </constraints>
-                    <state key="normal">
-                        <attributedString key="attributedTitle">
-                            <fragment content="播放">
-                                <attributes>
-                                    <color key="NSColor" red="0.13333333333333333" green="0.13879027522467327" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="17" name=".PingFangSC-Regular"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                    </state>
-                    <connections>
-                        <action selector="playAction:" destination="-1" eventType="touchUpInside" id="bwU-V3-IwJ"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvr-jb-nPL">
                     <rect key="frame" x="36" y="599" width="303" height="48"/>
                     <color key="backgroundColor" red="0.76078431369999999" green="0.67843137249999996" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,15 +36,108 @@
                         <action selector="recorderAudio:" destination="-1" eventType="touchUpInside" id="3xa-9v-46n"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHv-pC-YaK">
+                    <rect key="frame" x="291" y="523" width="48" height="48"/>
+                    <color key="backgroundColor" red="0.76078431369999999" green="0.67843137249999996" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="cgK-fx-KPz"/>
+                        <constraint firstAttribute="width" constant="48" id="xeG-r0-7Qx"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="结束">
+                                <attributes>
+                                    <color key="NSColor" red="0.13333333333333333" green="0.13879027522467327" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name=".PingFangSC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="finishAction:" destination="-1" eventType="touchUpInside" id="Ztt-QJ-4DJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3z-uh-2DD">
+                    <rect key="frame" x="36" y="523" width="48" height="48"/>
+                    <color key="backgroundColor" red="0.76078431369999999" green="0.67843137249999996" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="cq6-iC-FcT"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="gQ7-2I-Vsa"/>
+                        <constraint firstAttribute="width" constant="48" id="wZ0-9P-jjb"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="试听">
+                                <attributes>
+                                    <color key="NSColor" red="0.13333333333333333" green="0.13879027522467327" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name=".PingFangSC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="shitingAction:" destination="-1" eventType="touchUpInside" id="iCL-1v-KA0"/>
+                    </connections>
+                </button>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PCp-P9-48W">
+                    <rect key="frame" x="36" y="426" width="303" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="p0u-sN-Lo3"/>
+                    </constraints>
+                </progressView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间：0s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HV-vF-mZE">
+                    <rect key="frame" x="155.5" y="449" width="63" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="RPV-Mu-Pv9"/>
+                        <constraint firstAttribute="width" constant="63" id="ior-95-80p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wvm-29-9Dh">
+                    <rect key="frame" x="133" y="523" width="109" height="48"/>
+                    <color key="backgroundColor" red="0.76078431369999999" green="0.67843137249999996" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="6I2-7V-iWC"/>
+                        <constraint firstAttribute="width" constant="109" id="LpW-2X-xPj"/>
+                        <constraint firstAttribute="height" constant="48" id="hCv-wH-85M"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="播放背景音乐">
+                                <attributes>
+                                    <color key="NSColor" red="0.13333333333333333" green="0.13879027522467327" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name=".PingFangSC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="playAction:" destination="-1" eventType="touchUpInside" id="bwU-V3-IwJ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.58039215690000001" green="0.79607843140000001" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Hvr-jb-nPL" secondAttribute="bottom" constant="20" id="40R-tS-X0R"/>
+                <constraint firstItem="Wvm-29-9Dh" firstAttribute="top" secondItem="6HV-vF-mZE" secondAttribute="bottom" constant="38" id="Czp-EY-2OT"/>
+                <constraint firstAttribute="trailing" secondItem="PCp-P9-48W" secondAttribute="trailing" constant="36" id="Dlb-Ac-O3A"/>
+                <constraint firstItem="6HV-vF-mZE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FAN-cq-ZKR"/>
                 <constraint firstItem="Hvr-jb-nPL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LeX-bu-BWy"/>
+                <constraint firstItem="PCp-P9-48W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="OEh-NT-OLs"/>
+                <constraint firstItem="Hvr-jb-nPL" firstAttribute="top" secondItem="a3z-uh-2DD" secondAttribute="bottom" constant="28" id="Qs0-YZ-CSa"/>
                 <constraint firstAttribute="trailing" secondItem="Hvr-jb-nPL" secondAttribute="trailing" constant="36" id="bNM-J4-tzm"/>
+                <constraint firstItem="EHv-pC-YaK" firstAttribute="trailing" secondItem="Hvr-jb-nPL" secondAttribute="trailing" id="bSq-sW-fwy"/>
                 <constraint firstItem="Wvm-29-9Dh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fpg-Z3-HOw"/>
+                <constraint firstItem="a3z-uh-2DD" firstAttribute="leading" secondItem="Hvr-jb-nPL" secondAttribute="leading" id="h6P-fo-mf4"/>
+                <constraint firstItem="6HV-vF-mZE" firstAttribute="top" secondItem="PCp-P9-48W" secondAttribute="bottom" constant="18" id="kF1-eW-CeV"/>
                 <constraint firstItem="Hvr-jb-nPL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="mvd-f4-eNM"/>
                 <constraint firstItem="Hvr-jb-nPL" firstAttribute="top" secondItem="Wvm-29-9Dh" secondAttribute="bottom" constant="28" id="sNv-RK-0Go"/>
+                <constraint firstItem="Hvr-jb-nPL" firstAttribute="top" secondItem="EHv-pC-YaK" secondAttribute="bottom" constant="28" id="zav-d4-bJD"/>
             </constraints>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>

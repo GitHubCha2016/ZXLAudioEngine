@@ -134,20 +134,33 @@ NSString * const AEAudioFileWriterErrorDomain = @"com.theamazingaudioengine.AEAu
                                                   userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:NSLocalizedString(@"Couldn't prepare the output format (error %d/%4.4s)", @""), status, (char*)&fourCC]}];
             return NO;
         }
+        // 如果路径存在
+//        if ([[NSFileManager defaultManager]fileExistsAtPath:path]) {
+//            
+//            ExtAudioFileRef audioFile;
+//            ExtAudioFileOpenURL((__bridge CFURLRef)[NSURL fileURLWithPath:path], &audioFile);
+//            UInt32 ioNumberFrames;
+//            AudioBufferList * ioData = NULL;
+//            ExtAudioFileRead(audioFile, &ioNumberFrames, ioData);
+//            ExtAudioFileSeek(audioFile, ioNumberFrames);
+//            _audioFile = audioFile;
+//        }else{
+            // Create the file
+            status = ExtAudioFileCreateWithURL((__bridge CFURLRef)[NSURL fileURLWithPath:path],
+                                               kAudioFileM4AType,
+                                               &destinationFormat,
+                                               NULL,
+                                               kAudioFileFlags_EraseFile,
+                                               &_audioFile);
+            
+            if ( !AECheckOSStatus(status, "ExtAudioFileCreateWithURL") ) {
+                int fourCC = CFSwapInt32HostToBig(status);
+                if ( error ) *error = [NSError errorWithDomain:NSOSStatusErrorDomain
+                                                          code:status
+                                                      userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:NSLocalizedString(@"Couldn't open the output file (error %d/%4.4s)", @""), status, (char*)&fourCC]}];
+//        }
         
-        // Create the file
-        status = ExtAudioFileCreateWithURL((__bridge CFURLRef)[NSURL fileURLWithPath:path], 
-                                           kAudioFileM4AType, 
-                                           &destinationFormat, 
-                                           NULL, 
-                                           kAudioFileFlags_EraseFile, 
-                                           &_audioFile);
-        
-        if ( !AECheckOSStatus(status, "ExtAudioFileCreateWithURL") ) {
-            int fourCC = CFSwapInt32HostToBig(status);
-            if ( error ) *error = [NSError errorWithDomain:NSOSStatusErrorDomain 
-                                                      code:status 
-                                                  userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:NSLocalizedString(@"Couldn't open the output file (error %d/%4.4s)", @""), status, (char*)&fourCC]}];
+       
             return NO;
         }
 

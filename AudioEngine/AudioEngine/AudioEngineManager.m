@@ -16,14 +16,8 @@
 /** AEAudioController */
 @property (nonatomic, strong) AEAudioController * audioController;
 
-/** player */
-@property (nonatomic, strong) AEAudioFilePlayer * player;
-
-/** AERecorder */
-@property (nonatomic, strong) AERecorder * recorder;
-
-/** AVAudioPlayer */
-@property (nonatomic, strong) AVAudioPlayer * audioPalyer;
+/** 计时器 */
+@property (nonatomic, strong) NSTimer * audioPowerChangeTimer;
 
 @end
 
@@ -36,8 +30,17 @@ static AudioEngineManager * manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[AudioEngineManager alloc]init];
+        [manager initAudioController];
     });
     return manager;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+    }
+    return self;
 }
 
 - (void)initAudioController{
@@ -57,8 +60,21 @@ static AudioEngineManager * manager = nil;
         NSError *error = NULL;
         BOOL result = [_audioController start:&error];
         if ( !result ) {
-            // Report error
+            customLog(@"音频引擎开启失败");
+        }else{
+            customLog(@"音频引擎开启成功");
         }
+        
+        // 计时器获取声音 分贝
+        self.audioPowerChangeTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(powerChange:) userInfo:nil repeats:YES];
+    }
+}
+
+- (void)powerChange:(NSTimer *)timer{
+    Float32 inputPeak,inputAvg;
+    [self.audioController inputAveragePowerLevel:&inputAvg peakHoldLevel:&inputPeak];
+    if (self.AudioPowerChangeBlock) {
+        _AudioPowerChangeBlock(inputAvg, inputPeak);
     }
 }
 
@@ -72,7 +88,9 @@ static AudioEngineManager * manager = nil;
         [self.audioController removeChannels:@[_player]];
         self.player = nil;
     } else {
-        if ( ![[NSFileManager defaultManager] fileExistsAtPath:url] ) return;
+        if ( ![[NSFileManager defaultManager] fileExistsAtPath:url] )
+        { customLog(@"音频不存在");
+            return;}
         
         self.player = [AEAudioFilePlayer audioFilePlayerWithURL:[NSURL fileURLWithPath:url] error:&error];
         
@@ -104,7 +122,6 @@ static AudioEngineManager * manager = nil;
     // 获取播放头的位置
     return AEAudioFilePlayerGetPlayhead(self.player);
 }
-
 
 - (void)recorderWithFilePath:(NSString *)filePath{
     if (!_recorder) {
@@ -140,11 +157,13 @@ static AudioEngineManager * manager = nil;
     // 开始录音
     AERecorderStartRecording(self.recorder);
 }
+
 - (void)startRecorder{
     if (self.recorder && ![self.recorder recording]) {
         AERecorderStartRecording(self.recorder);
     }
 }
+
 - (void)stopRecorder{
     // 暂停录音
     if (self.recorder && [self.recorder recording]) {
@@ -166,19 +185,6 @@ static AudioEngineManager * manager = nil;
 }
 
 
-#pragma mark AVFoundation
-- (void)playAudio:(NSURL *)url{
-    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
-    NSError * error;
-    self.audioPalyer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    //self.audioPalyer.delegate = self;
-    BOOL success = [self.audioPalyer play];
-    if (success) {
-        NSLog(@"播放成功");
-    }else{
-        NSLog(@"播放失败");
-    }
-    
-}
+
 
 @end
