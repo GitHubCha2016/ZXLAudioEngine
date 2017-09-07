@@ -14,8 +14,10 @@
 		181873B31F4EBC3F0098E9F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181873B21F4EBC3F0098E9F0 /* Assets.xcassets */; };
 		181873B61F4EBC3F0098E9F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181873B41F4EBC3F0098E9F0 /* LaunchScreen.storyboard */; };
 		1818753C1F4EDCAE0098E9F0 /* AudioEngineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818753B1F4EDCAE0098E9F0 /* AudioEngineManager.m */; };
-		1865FBCC1F50149B00F0BF25 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865FBCA1F50149B00F0BF25 /* RootViewController.m */; };
-		1865FBCD1F50149B00F0BF25 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1865FBCB1F50149B00F0BF25 /* RootViewController.xib */; };
+		182DE6A91F5D0566001EB749 /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE6A81F5D0566001EB749 /* AnimationView.m */; };
+		182DE6AF1F5D3ED2001EB749 /* AudioTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE6AE1F5D3ED2001EB749 /* AudioTableView.m */; };
+		185BEDA31F5D44FD009E9CA9 /* AudioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BEDA21F5D44FD009E9CA9 /* AudioTableViewCell.m */; };
+		18686C721F5E4072004BD3DA /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 18686C711F5E4072004BD3DA /* NSString+File.m */; };
 		187527961F590CEC00ECF0A9 /* 吴亦凡-时间煮雨.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 187527951F590CEC00ECF0A9 /* 吴亦凡-时间煮雨.mp3 */; };
 		1875279A1F590D7600ECF0A9 /* AVEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 187527991F590D7600ECF0A9 /* AVEngine.m */; };
 		1875279C1F592CBC00ECF0A9 /* Recording.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1875279B1F592CBC00ECF0A9 /* Recording.m4a */; };
@@ -42,10 +44,15 @@
 		181875381F4EC4280098E9F0 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		1818753A1F4EDCAE0098E9F0 /* AudioEngineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioEngineManager.h; sourceTree = "<group>"; };
 		1818753B1F4EDCAE0098E9F0 /* AudioEngineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioEngineManager.m; sourceTree = "<group>"; };
+		182DE6A71F5D0566001EB749 /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
+		182DE6A81F5D0566001EB749 /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
+		182DE6AD1F5D3ED2001EB749 /* AudioTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioTableView.h; sourceTree = "<group>"; };
+		182DE6AE1F5D3ED2001EB749 /* AudioTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioTableView.m; sourceTree = "<group>"; };
+		185BEDA11F5D44FD009E9CA9 /* AudioTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioTableViewCell.h; sourceTree = "<group>"; };
+		185BEDA21F5D44FD009E9CA9 /* AudioTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioTableViewCell.m; sourceTree = "<group>"; };
 		1865FBC71F5013FE00F0BF25 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
-		1865FBC91F50149B00F0BF25 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		1865FBCA1F50149B00F0BF25 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		1865FBCB1F50149B00F0BF25 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		18686C701F5E4072004BD3DA /* NSString+File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+File.h"; sourceTree = "<group>"; };
+		18686C711F5E4072004BD3DA /* NSString+File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+File.m"; sourceTree = "<group>"; };
 		187527951F590CEC00ECF0A9 /* 吴亦凡-时间煮雨.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "吴亦凡-时间煮雨.mp3"; sourceTree = "<group>"; };
 		187527981F590D7600ECF0A9 /* AVEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVEngine.h; sourceTree = "<group>"; };
 		187527991F590D7600ECF0A9 /* AVEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVEngine.m; sourceTree = "<group>"; };
@@ -132,13 +139,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		182DE6A61F5D04BA001EB749 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				182DE6A71F5D0566001EB749 /* AnimationView.h */,
+				182DE6A81F5D0566001EB749 /* AnimationView.m */,
+				182DE6AD1F5D3ED2001EB749 /* AudioTableView.h */,
+				182DE6AE1F5D3ED2001EB749 /* AudioTableView.m */,
+				185BEDA11F5D44FD009E9CA9 /* AudioTableViewCell.h */,
+				185BEDA21F5D44FD009E9CA9 /* AudioTableViewCell.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		1865FBC81F50148700F0BF25 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				182DE6A61F5D04BA001EB749 /* Animation */,
 				187527971F590D5100ECF0A9 /* AVFoundationEngine */,
-				1865FBC91F50149B00F0BF25 /* RootViewController.h */,
-				1865FBCA1F50149B00F0BF25 /* RootViewController.m */,
-				1865FBCB1F50149B00F0BF25 /* RootViewController.xib */,
 				1878D6771F57DD98000201C4 /* RecorderViewController.h */,
 				1878D6781F57DD98000201C4 /* RecorderViewController.m */,
 				1878D6791F57DD98000201C4 /* RecorderViewController.xib */,
@@ -151,6 +169,8 @@
 			children = (
 				187527981F590D7600ECF0A9 /* AVEngine.h */,
 				187527991F590D7600ECF0A9 /* AVEngine.m */,
+				18686C701F5E4072004BD3DA /* NSString+File.h */,
+				18686C711F5E4072004BD3DA /* NSString+File.m */,
 			);
 			path = AVFoundationEngine;
 			sourceTree = "<group>";
@@ -247,7 +267,6 @@
 				1878D6821F57DFF4000201C4 /* video.mov in Resources */,
 				1878D6801F57DFF4000201C4 /* frozen.m4a in Resources */,
 				181873B61F4EBC3F0098E9F0 /* LaunchScreen.storyboard in Resources */,
-				1865FBCD1F50149B00F0BF25 /* RootViewController.xib in Resources */,
 				181873B31F4EBC3F0098E9F0 /* Assets.xcassets in Resources */,
 				1875279C1F592CBC00ECF0A9 /* Recording.m4a in Resources */,
 				1878D6811F57DFF4000201C4 /* fun.m4a in Resources */,
@@ -314,13 +333,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182DE6AF1F5D3ED2001EB749 /* AudioTableView.m in Sources */,
 				1878D67A1F57DD98000201C4 /* RecorderViewController.m in Sources */,
+				185BEDA31F5D44FD009E9CA9 /* AudioTableViewCell.m in Sources */,
 				181873AE1F4EBC3F0098E9F0 /* ViewController.m in Sources */,
 				1875279A1F590D7600ECF0A9 /* AVEngine.m in Sources */,
 				181873AB1F4EBC3F0098E9F0 /* AppDelegate.m in Sources */,
 				1818753C1F4EDCAE0098E9F0 /* AudioEngineManager.m in Sources */,
+				18686C721F5E4072004BD3DA /* NSString+File.m in Sources */,
+				182DE6A91F5D0566001EB749 /* AnimationView.m in Sources */,
 				181873A81F4EBC3F0098E9F0 /* main.m in Sources */,
-				1865FBCC1F50149B00F0BF25 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

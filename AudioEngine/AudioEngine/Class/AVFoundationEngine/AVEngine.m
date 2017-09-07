@@ -7,13 +7,11 @@
 //
 
 #import "AVEngine.h"
-#import <AVFoundation/AVFoundation.h>
 
 @interface AVEngine ()
 
 
-/** AVAudioPlayer */
-@property (nonatomic, strong) AVAudioPlayer * audioPalyer;
+
 
 @end
 
@@ -41,6 +39,9 @@
         NSLog(@"播放成功");
     }else{
         NSLog(@"播放失败");
+    }
+    if (self.PlayResultBlock) {
+        self.PlayResultBlock(success);
     }
 }
 

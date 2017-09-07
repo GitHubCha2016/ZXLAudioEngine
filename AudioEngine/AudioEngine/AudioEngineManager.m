@@ -66,7 +66,7 @@ static AudioEngineManager * manager = nil;
         }
         
         // 计时器获取声音 分贝
-        self.audioPowerChangeTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(powerChange:) userInfo:nil repeats:YES];
+        self.audioPowerChangeTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(powerChange:) userInfo:nil repeats:YES];
     }
 }
 
@@ -124,6 +124,7 @@ static AudioEngineManager * manager = nil;
 }
 
 - (void)recorderWithFilePath:(NSString *)filePath{
+    // 每次进来都是finish状态 重新创建一个录音器
     if (!_recorder) {
         NSError * error = nil;
         // 准备录音 设置  路径 输出格式
@@ -174,6 +175,11 @@ static AudioEngineManager * manager = nil;
 - (void)finishRecorder{
     customLog(@"%@",self.recorder.path);
     [self.recorder finishRecording];
+    
+    // 移除录音器
+    [self.audioController removeOutputReceiver:_recorder];
+    [self.audioController removeInputReceiver:_recorder];
+    _recorder = nil;
 }
 
 
